@@ -59,9 +59,9 @@ gulp.task( 'watch', function() {
 //* ZIP theme
 gulp.task( 'package-theme', function() {
 
-	gulp.src( ['./**/*', '!./node_modules/', '!./gulpfile.js', '!./package.json' ] )
+	gulp.src( [ './**/*', '!./node_modules/', '!./node_modules/**', '!./gulpfile.js', '!./package.json' ] )
 		.pipe( zip( __dirname.split("/").pop() + '.zip' ) )
-		.pipe( gulp.dest( './' ) );
+		.pipe( gulp.dest( '../' ) );
 
 });
 
